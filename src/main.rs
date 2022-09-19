@@ -2,12 +2,8 @@ use std::collections::HashMap;
 use std::env;
 use std::path::Path;
 
-pub mod tables;
-pub mod coordinates;
-pub mod file_operations;
-pub mod functions;
-pub mod operations;
-pub mod selections;
+pub mod core;
+use crate::core::{file_operations, tables, operations};
 
 
 fn main() {
