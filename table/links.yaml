@@ -1,0 +1,42 @@
+operations:
+- id: 0
+  output_anchor:
+    type: BaseCoordinate
+    row:
+      type: AbsOrdinate
+      val: 0
+    col:
+      type: AbsOrdinate
+      val: 0
+  function: 
+    type: RawInput
+    values:
+    - ["Name", "Age", "Weight"]
+    - ["Billy", 10, 45.4]
+    - ["Bob", 11, 50.5]
+    - ["Bertha", 100, 132.2]
+- id: 1
+  input_selection:
+    type: BoxSelection
+    upper_left:
+      type: OffsetCoordinate
+      row_offset: 1
+      col_offset: 0
+      internal_coordinate:
+        type: OpCorner
+        op_id: 0
+        corner: TopRight
+    lower_right:
+      type: OpCorner
+      op_id: 0
+      corner: BotRight
+  output_anchor:
+    type: OffsetCoordinate
+    row_offset: 1
+    col_offset: 0
+    internal_coordinate:
+      type: OpCorner
+      op_id: 0
+      corner: BotRight
+  function:
+    type: Average
